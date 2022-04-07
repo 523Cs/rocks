@@ -15,38 +15,58 @@ function computerChoice() {
   const computerOptions = ["rock", "paper", "scissor"];
   const randomNum = Math.floor(Math.random() * 3);
   compChoice = computerOptions[randomNum];
-}
-//Computer plays a round of the game
-function playRound(playerChoice, computerSelection) {
-  if (playerChoice === computerSelection) {
-    console.log("tie");
-  } else if (playerChoice === "rock" && computerSelection === "paper") {
-    console.log("YOU LOSE");
-    computerWin();
-  } else if (playerChoice === "rock" && computerSelection === "scissors") {
-    console.log("YOU WIN");
-    playerWin();
-  } else if (playerChoice === "paper" && computerSelection === "rock") {
-    console.log("YOU WIN");
-    playerWin();
-  } else if (playerChoice === "paper" && computerSelection === "scissors") {
-    console.log("YOU LOSE");
-    computerWin();
-  } else if (playerChoice === "scissors" && computerSelection === "paper") {
-    console.log("YOU WIN");
-    playerWin();
-  } else {
-    console.log("YOU LOSE");
-    computerWin();
-  }
-}
+};
+//Throws the users option
+function throwRock() {
+  playerChoice = "rock";
+  computerChoice();
+  playGame(playerChoice, compChoice)
+  console.log(playerChoice, compChoice);
+};
+
+function throwPaper() {
+  playerChoice = "paper";
+  computerChoice();
+  playGame(playerChoice, compChoice)
+};
+
+function throwScissor() {
+  playerChoice = "scissor";
+  computerChoice();
+  playGame(playerChoice, compChoice)
+};
+
+//Resets the players scores
+function reset(){
+  pScoreboard.innerHTML = "0";
+  cScoreboard.innerHTML = "0";
+  roundResult.innerHTML = "";
+};
+
 //Shows player wins
 function playerWin() {
-  ++playerScore;
-  console.log("Player Score is " + playerScore);
-}
-function computerWin() {
-  ++computerScore;
-  console.log("Computer Score is " + computerScore)
+  playerScore++;
+  pScoreboard.innerHTML = playerScore;
+  console.log("Player Wins!");
+};
 
-}
+function computerWin() {
+  computerScore++;
+  cScoreboard.innerHTML = computerScore;
+  console.log("Computer Wins!");
+};
+
+//Computer plays a round of the game
+function playGame(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    console.log("tie");
+  } else if (playerSelection === "rock" && computerSelection === "scissor") {
+    playerWin();
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    playerWin();
+  } else if (playerSelection === "scissor" && computerSelection === "paper") {
+    playerWin();
+  } else {
+    computerWin();
+  }
+};
