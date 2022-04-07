@@ -1,15 +1,39 @@
 .title{
   font-size: 45px;
   text-align:center;
-  font-family:monospace;
 }
 h2{
   text-align:center;
-  font-family:monospace;
 }
 body{
   text-align:center;
-  font-family:monospace;
+  background-color: maroon;
+  font-size:20px;
+
+}
+button.reset{
+  background-color:pink;
+  font-size:20px;
+  border-style:groove;
+
+}
+button.scissors{
+  background-color: green;
+  font-size:20px;
+  border-style:groove;
+
+}
+button.paper{
+  background-color: blue;
+  font-size:20px;
+  border-style:groove;
+
+}
+button.rock{
+  background-color: orange;
+  font-size:20px;
+  border-style:groove;
+
 }
 .button{
   border: none;
@@ -19,4 +43,5 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  
 }
