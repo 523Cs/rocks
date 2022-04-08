@@ -7,7 +7,7 @@ h2{
 }
 body{
   text-align:center;
-  background-color: maroon;
+  background-color: #0E9A4B;
   font-size:20px;
 
 }
@@ -18,19 +18,19 @@ button.reset{
 
 }
 button.scissors{
-  background-color: green;
+  background-color: #83E5F4;
   font-size:20px;
   border-style:groove;
 
 }
 button.paper{
-  background-color: blue;
+  background-color: #5376F3;
   font-size:20px;
   border-style:groove;
 
 }
 button.rock{
-  background-color: orange;
+  background-color: #E783F4;
   font-size:20px;
   border-style:groove;
 
@@ -43,5 +43,8 @@ button.rock{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  
+
+}
+button:hover {
+  background-color:white;
 }
