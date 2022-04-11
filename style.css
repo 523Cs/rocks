@@ -48,3 +48,16 @@ button.rock{
 button:hover {
   background-color:white;
 }
+footer{
+  background-color:black;
+  text-align:center;
+  font-family:georgia;
+  position:fixed;
+  left: 0px;
+  color: white;
+  bottom: 0px;
+  height:30px;
+  width:100%;
+  padding-top:4px;
+  padding-bottom:5px;
+}
