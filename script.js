@@ -2,7 +2,7 @@
 //Starting HTML elements as a variable for easy success
 let pScoreboard = document.querySelector('.p-count');
 let cScoreboard = document.querySelector('.c-count');
-let roundResult = document.querySelector('.result');
+let roundResult = document.querySelector('.results');
 //setting score variables for player & computer to track score
 let playerScore = 0;
 let computerScore = 0;
@@ -47,19 +47,21 @@ function reset(){
 function playerWin() {
   playerScore++;
   pScoreboard.innerHTML = playerScore;
+  roundResult.innerHTML = "Player Wins!";
   console.log("Player Wins!");
 };
 
 function computerWin() {
   computerScore++;
   cScoreboard.innerHTML = computerScore;
+  roundResult.innerHTML = "Computer Wins!";
   console.log("Computer Wins!");
 };
 
 //Computer plays a round of the game
 function playGame(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    console.log("tie");
+    roundResult.innerHTML = "It's a tie!";
   } else if (playerSelection === "rock" && computerSelection === "scissor") {
     playerWin();
   } else if (playerSelection === "paper" && computerSelection === "rock") {
